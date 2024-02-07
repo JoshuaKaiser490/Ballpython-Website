@@ -83,6 +83,11 @@
       column-gap: 0;
       justify-items: center;
     }
+  
+    .python-info img{
+      width: 100%;
+    }
+  
   }
   
   nav {
@@ -133,24 +138,55 @@
   .python-info {
     flex: 1;
     padding: 20px;
+    width: 90%;
   }
   
   .python-info h2 {
     font-size: 30px;
+    text-decoration: underline;
   }
   
-  .python-info p {
+  .python-info p,
+  .python-info ul {
     font-size: 18px;
   }
   
+  .python-info ul a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .ball img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  
+  .ball {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 250px 250px);
+    animation: roll 7s infinite ease-in-out alternate;
+  }
+  
+  @keyframes roll {
+    0% {
+      transform: translateX(0px) rotate(0);
+    }
+    100% {
+      transform: translateX(50vw) rotate(2turn);
+    }
+  }
+  
   .hero {
-    text-align: center;
     padding: 60px 0;
     background-color: #ff9900;
     color: #fff;
   }
   
   .hero h1 {
+    text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
   }
@@ -158,6 +194,8 @@
   .hero p {
     font-size: 18px;
     margin-bottom: 40px;
+    text-align: center;
+    padding: 20px;
   }
   
   .btn {
@@ -190,6 +228,52 @@
   .footer-info p {
     font-size: 16px;
     margin-bottom: 10px;
+  }
+  
+  .hover_img a {
+    position: relative;
+  }
+  
+  .hover_img a span {
+    position: absolute;
+    display: none;
+    z-index: 99;
+  }
+  
+  .hover_img a:hover span {
+    display: block;
+  }
+  
+  .hover_img img {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .ball {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 250px 250px);
+      animation: roll 7s infinite ease-in-out alternate;
+    }
+  
+    @keyframes roll {
+      0% {
+        transform: translateX(0px) rotate(0);
+      }
+      100% {
+        transform: translateX(0vw) rotate(2turn);
+      }
+    }
   }
   
   @media only screen and (max-width: 600px) {
