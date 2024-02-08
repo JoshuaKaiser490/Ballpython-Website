@@ -252,5 +252,8 @@
       width: auto;
     }
 
+    article img{
+      width: 100vw;
+    }
   }
 
