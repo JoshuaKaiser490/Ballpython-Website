@@ -175,7 +175,7 @@
       transform: translateX(0px) rotate(0);
     }
     100% {
-      transform: translateX(45vw) rotate(2turn);
+      transform: translateX(33vw) rotate(2turn);
     }
   }
   
